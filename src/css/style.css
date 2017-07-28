@@ -20,3 +20,33 @@ body{
 .dropdown-content a:hover{
   background-color: #e0e0e0;
 }
+
+.box-menu{
+  background-color: #00c853;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  color: #FFF;
+  width: 250px;
+  height: 180px;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0;
+}
+
+.biru{
+  background-color: #0091ea;
+}
+
+.box-menu h4{
+  font-size: 30px;
+  color: #FFF;
+  margin-top: 10px;
+}
+
+.box-menu a{
+  color: #FFF;
+}
+
+.geser{
+  margin-left: 20px;
+}

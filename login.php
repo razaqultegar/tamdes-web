@@ -3,7 +3,7 @@ $db = new mysqli("localhost", "root", "", "db_tamdes");
 @session_start();
 
 if (@$_SESSION['admin']) {
-  header("location:/tamdes");
+  header("location:/tamdes/admin");
 }else {
 ?>
 
@@ -45,7 +45,7 @@ if (@$_SESSION['admin']) {
           $log->fetch();
           if ($check > 0) {
             @$_SESSION['admin'] = $id;
-            header("location:/tamdes");
+            header("location:/tamdes/admin");
           }else {
             ?>
             <script type="text/javascript">alert("Login Gagal, Silahkan coba lagi!");</script>
