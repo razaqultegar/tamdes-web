@@ -21,10 +21,6 @@ require_once('../src/sidebar.php');
               <span class="bold" style="font-size: 78px; line-height: 84px; font-weight: 800;">90</span>
               <h4 style="font-size: 20px; line-height: 22px; font-weight: 400;">Jumlah Tamu</h4>
             </div>
-            <div class="box-menu biru waves-effect center" style="padding-top: 25px; margin-left: 6px;">
-              <span class="bold" style="font-size: 78px; line-height: 84px; font-weight: 800;">90</span>
-              <h4 style="font-size: 20px; line-height: 22px; font-weight: 400;">Jumlah Tamu</h4>
-            </div>
           </div>
         </div>
         <div class="row">

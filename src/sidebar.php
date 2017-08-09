@@ -34,7 +34,7 @@
             <li class="bold"><a class="collapsible-header  waves-effect"><i class="material-icons">assignment</i>Lihat Data</a>
               <div class="collapsible-body">
                 <ul>
-                  <li><a href="#">Buku Tamu</a></li>
+                  <li><a href="view_bukutamu.php">Buku Tamu</a></li>
                 </ul>
               </div>
             </li>
