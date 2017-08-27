@@ -42,7 +42,7 @@ $result = tampilData();
               <td><?= $row['keper']; ?></td>
               <td class="center">
                 <a href="edit.php?id=<?php echo $row['id']; ?>">Edit</a>
-                <a href="delete_data.php?id=<?php echo $row['noktp']; ?>">Hapus</a>
+                <a href="delete_data.php?id=<?php echo $row['id']; ?>">Hapus</a>
               </td>
             </tr>
             <?php

@@ -1,8 +1,8 @@
 <?php
 require_once('core/init.php');
 
-if(isset($_GET['noktp'])){
-  if(hapusData($_GET['noktp'])){
+if(isset($_GET['id'])){
+  if(hapusData($_GET['id'])){
     header('location: view_bukutamu.php');
   }else {
     ?>

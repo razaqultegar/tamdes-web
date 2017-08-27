@@ -26,20 +26,29 @@ function tampilData(){
 function tampilData_per_id($noktp){
   global $link;
 
-  $query = "SELECT * FROM tb_buku WHERE noktp = $noktp";
+  $query = "SELECT * FROM tb_buku WHERE id = $id";
   $result = mysqli_query($link, $query) or die('Data Gagal Dilihat');
 
   return $result;
 }
 
 function hapusData($noktp){
-  $query = "DELETE FROM tb_buku WHERE noktp = $noktp";
+  $query = "DELETE FROM tb_buku WHERE id = $id";
   return run($query);
 }
 
-function editData($nama, $kelas, $jurusan, $id){
-  $query = "UPDATE tb_data SET nama = '$nama', kelas = '$kelas', jurusan = '$jurusan' WHERE id = $id";
+function editData($noktp, $nama, $notelp, $asal, $tinggal, $lama, $keper, $id){
+  $query = "UPDATE tb_data SET noktp = '$noktp', nama = '$nama', notelp = '$notelp', asal = '$asal', tinggal = '$tinggal', lama = '$lama', keper = '$keper' WHERE id = $id";
   return run($query);
+}
+
+function jumlahData(){
+  global $link;
+
+  $query = "SELECT count(id) AS total FROM tb_buku";
+  $result = "mysqli_query($link, $query)";
+  $values = "mysqli_fetch_assoc($result)";
+  $num_rows = $values['total'];
 }
 
 ?>
