@@ -50,3 +50,10 @@ body{
 .geser{
   margin-left: 20px;
 }
+
+.homeimage{
+  height: 100%;
+  border-radius: 8px;
+  margin-top: -50px;
+  margin-left: 22px;
+}

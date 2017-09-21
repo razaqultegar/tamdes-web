@@ -15,7 +15,7 @@ if (isset($_POST['kirim'])) {
     <main>
       <div class="section row">
         <div class="col s12">
-        <a class="waves-effect btn" style="background-color: #00b0ff;"><i class="material-icons left">list</i>Lihat Buku Tamu</a>
+        <a class="waves-effect btn" style="background-color: #00b0ff;" href="view_bukutamu.php"><i class="material-icons left">list</i>Lihat Buku Tamu</a>
         <a class="waves-effect btn modal-trigger" style="background-color: #f44336; margin-left: 6px;" href="#modal1"><i class="material-icons left">help</i>Bantuan</a>
         </div>
       </div>

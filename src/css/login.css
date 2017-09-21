@@ -17,7 +17,7 @@ section {
   border-radius: 5px;
 }
 
-span {
+.logo {
   display: block;
   position: relative;
   margin: 0 auto;

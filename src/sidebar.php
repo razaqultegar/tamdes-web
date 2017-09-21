@@ -1,13 +1,17 @@
+<?php require_once('../admin/core/init.php'); ?>
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- CSS -->
-    <link type="text/css" rel="stylesheet" href="../vendor/css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../vendor/css/materialize.min.css" media="screen,projection"/>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../vendor/css/icon.css" media="screen,projection"/>
+    <!-- SweetAlert -->
+    <link type="text/css" rel="stylesheet" href="../src/css/sweetalert.css" media="screen,projection"/>
     <!-- Custom CSS -->
-    <link type="text/css" rel="stylesheet" href="../src/css/style.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../src/css/style.css" media="screen,projection"/>
   </head>
 
   <body>

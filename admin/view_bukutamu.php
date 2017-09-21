@@ -14,18 +14,31 @@ $result = tampilData();
         </div>
       </div>
 
+      <div id="modal1" class="modal modal-fixed-footer">
+        <div class="modal-content">
+          <h4>Modal Header</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+        </div>
+      </div>
+
       <div class="row">
         <form class="col s12">
-          <table class="striped responsive-table">
+          <table class="highlight responsive-table">
             <tr>
-              <td>No. KTP</td>
-              <td>Nama Lengkap</td>
-              <td>No. Telp/HP</td>
-              <td>Alamat Asal</td>
-              <td>Alamat Tinggal</td>
-              <td>Lama Tinggal</td>
-              <td>Keperluan</td>
-              <td>Opsi</td>
+              <td><strong>No. KTP</strong></td>
+                <td><strong>Nama Lengkap</strong></td>
+                <td><strong>No. Telp/HP</strong></td>
+                <td><strong>Alamat Asal</strong></td>
+                <td><strong>Alamat Tinggal</strong></td>
+                <td><strong>Lama Tinggal</strong></td>
+                <td><strong>Keperluan</strong></td>
+                <td><strong>Opsi</strong></td>
             </tr>
 
             <?php
@@ -41,8 +54,8 @@ $result = tampilData();
               <td><?= $row['lama']; ?></td>
               <td><?= $row['keper']; ?></td>
               <td class="center">
-                <a href="edit.php?id=<?php echo $row['id']; ?>">Edit</a>
-                <a href="delete_data.php?id=<?php echo $row['id']; ?>">Hapus</a>
+                <a href="delete_data.php?id=<?php echo $row['id']; ?>"><i class="material-icons small" style="color: #e53935;">delete</i></a>
+                <a href="edit.php?id=<?php echo $row['id']; ?>"><i class="material-icons small">mode_edit</i></a>
               </td>
             </tr>
             <?php
@@ -51,6 +64,16 @@ $result = tampilData();
           </table>
         </form>
       </div>
+
+      <ul class="pagination">
+        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+        <li class="active"><a href="#!">1</a></li>
+        <li class="waves-effect"><a href="#!">2</a></li>
+        <li class="waves-effect"><a href="#!">3</a></li>
+        <li class="waves-effect"><a href="#!">4</a></li>
+        <li class="waves-effect"><a href="#!">5</a></li>
+        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+      </ul>
     </main>
 
 <?php

@@ -32,7 +32,7 @@ function tampilData_per_id($noktp){
   return $result;
 }
 
-function hapusData($noktp){
+function hapusData($id){
   $query = "DELETE FROM tb_buku WHERE id = $id";
   return run($query);
 }

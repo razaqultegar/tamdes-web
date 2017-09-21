@@ -1,10 +1,10 @@
 <?php
-$db = new mysqli("localhost", "root", "", "db_tamdes");
+$db = new mysqli("localhost", "root", "", "db_tamdes"); 
 @session_start();
 
-if (@$_SESSION['admin']) {
-  header("location:/tamdes/admin");
-}else {
+if (@$_SESSION['admin']) { 
+  header("location:/tamdes/admin"); 
+}else { 
 ?>
 
 <!DOCTYPE html>
@@ -16,11 +16,14 @@ if (@$_SESSION['admin']) {
     <!-- CSS -->
     <link rel="stylesheet" href="src/css/login.min.css">
     <link rel="stylesheet" href="src/css/login.css">
+    <!-- SweetAlert -->
+    <link rel="stylesheet" href="src/css/sweetalert.css">
+    <script src="src/js/sweetalert.min.js"></script>
   </head>
 
   <body>
     <section>
-      <span></span>
+      <div class="logo"></div>
       <h1>Admin Login</h1>
       <form action="" method="post">
         <input name="username" placeholder='User Name' type='text'>
@@ -33,15 +36,21 @@ if (@$_SESSION['admin']) {
         $password = @$_POST['password'];
         if ($username == '' || $password == '') {
           ?>
-          <script type="text/javascript">alert("Username / Password tidak boleh kosong!");</script>
+          <script type="text/javascript">
+            swal({title: "Login Gagal!",
+                  text: "Username dan Password Tidak Boleh Kosong!",
+                  timer: 2000,
+                  type: "error",
+                  showConfirmButton: false })
+          </script>
           <?php
         }else {
           $log = $db->prepare("SELECT * FROM tb_login where username = ? and password = md5(?)") or die ($db->error);
           $log->bind_param('ss', $username, $password);
           $log->execute();
-          $log->store_result();
-          $check = $log->num_rows;
-          $log->bind_result($id, $username, $password, $nama);
+          $log->store_result(); 
+          $check = $log->num_rows; 
+          $log->bind_result($id, $username, $password, $nama); 
           $log->fetch();
           if ($check > 0) {
             @$_SESSION['admin'] = $id;
