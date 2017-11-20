@@ -34,32 +34,12 @@
               </div>
             </li>
           </ul>
-          <ul class="collapsible collapsible-accordion">
-            <li class="bold"><a class="collapsible-header  waves-effect"><i class="material-icons">assignment</i>Lihat Data</a>
-              <div class="collapsible-body">
-                <ul>
-                  <li><a href="view_bukutamu.php">Buku Tamu</a></li>
-                </ul>
-              </div>
-            </li>
-          </ul>
         </li>
+        <li class="bold"><a href="setting_admin.php" class="waves-effect"><i class="material-icons">account_circle</i>Profile</a></li>
+        <li class="bold"><a href="#!" class="waves-effect"><i class="material-icons">live_help</i>Bantuan</a></li>
         <li class="bold"><a href="../logout.php" class="waves-effect"><i class="material-icons">power_settings_new</i>Logout</a></li>
       </ul>
     </header>
 
     <!-- Main -->
-    <ul id="dropdown" class="dropdown-content">
-    	<li class="liku"><a href="#"><i class="material-icons left">account_circle</i>Profile</a></li>
-    	<li class="liku"><a href="#"><i class="material-icons">settings</i>Pengaturan</a></li>
-      <li class="liku"><a href="#"><i class="material-icons">live_help</i>Bantuan</a></li>
-      <li class="divider"></li>
-      <li class="liku"><a href="../logout.php"><i class="material-icons">keyboard_tab</i>Logout</a></li>
-    </ul>
-    <nav>
-      <div class="nav-wrapper">
-        <ul class="right hide-on-med-and-down navku">
-          <li><a class="dropdown-button" href="#!" data-activates="dropdown" data-beloworigin="true">Hi, Admin<i class="material-icons right">arrow_drop_down</i></a></li>
-        </ul>
-      </div>
-    </nav>
+    <nav><div class="nav-wrapper"></div></nav>
