@@ -41,7 +41,7 @@
 	  		<div class="col s12 l6">
 	  			<span class="white-text" style="font-size: 30px; font-weight: 300;">BukuTamu Online</span>
 	  			<h3 class="white-text" style="font-size: 18px; line-height: 28px; max-width: 440px;">Sebuah Aplikasi Sistem Informasi berbasis Web dan Android. Bertujuan untuk mendigitalisasi Sistem Buku Tamu sekarang dari bentuk Dokumen Offline ke Dokumen Online.</h3>
-	  			<a href="#!" class="waves-effect btn" style="background-color: #00b0ff;">Demo Aplikasi</a>
+	  			<a href="./login.php" class="waves-effect btn" style="background-color: #00b0ff;">Demo Aplikasi</a>
 	  		</div>
 	  		<div class="col s12 l6">
 	  			<img class="responsive-img" style="width: 65%; float: right; margin-right: 15%" src="src/img/62.png">

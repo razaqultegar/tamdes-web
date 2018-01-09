@@ -4,7 +4,7 @@ require_once('../src/sidebar.php');
 require_once('core/init.php');
 if (isset($_POST['kirim'])) {
   if(kirimData($_POST['noktp'], $_POST['nama'], $_POST['notelp'], $_POST['asal'], $_POST['tinggal'], $_POST['lama'], $_POST['keper'])){
-    header('location: view_bukutamu.php');
+    header('location: index.php');
   }else {
     echo "Data Gagal Dikirim";
   }
@@ -15,7 +15,7 @@ if (isset($_POST['kirim'])) {
     <main>
       <div class="section row">
         <div class="col s12">
-        <a class="waves-effect btn" style="background-color: #00b0ff;" href="view_bukutamu.php"><i class="material-icons left">list</i>Lihat Buku Tamu</a>
+        <a class="waves-effect btn" style="background-color: #00b0ff;" href="index.php"><i class="material-icons left">list</i>Lihat Buku Tamu</a>
         <a class="waves-effect btn modal-trigger" style="background-color: #f44336; margin-left: 6px;" href="#modal1"><i class="material-icons left">help</i>Bantuan</a>
         </div>
       </div>

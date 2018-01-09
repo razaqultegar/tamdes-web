@@ -2,24 +2,28 @@
 @session_start();
 if (@$_SESSION['admin']) {
 require_once('../src/sidebar.php');
-require_once('core/init.php');
-$result = tampilData();
+$link = mysqli_connect("localhost", "root", "", "db_tamdes") or die(mysqli_error($link));
+
+$limit = 10;
+if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; };
+$start_from = ($page-1) * $limit;
+
+$sql = mysqli_query($link, "SELECT * FROM tb_buku LIMIT $start_from, $limit");
+
+$Hasil = mysqli_query($link, "SELECT * FROM tb_buku");
+$total = mysqli_num_rows($Hasil);
+
+$pages = ceil($total/$limit);
 ?>
     <title>Admin Page - TamuDesa</title>
 
     <main>
-      <div class="section"></div>
-
-      <div id="modal1" class="modal modal-fixed-footer">
-        <div class="modal-content">
-          <h4>Modal Header</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-        </div>
-        <div class="modal-footer">
-          <a class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+      <div class="section right" style="margin-right: 10px;">
+        <div class="col s12">
+          <form action="search.php" method="post">
+            <input id="search-box" name="cari" size="40" type="text" placeholder="Masukkan No. KTP"/>
+            <input id="search-btn" value="Cari Tamu" type="submit"/>
+          </form>
         </div>
       </div>
 
@@ -40,7 +44,7 @@ $result = tampilData();
             </thead>
 
             <?php
-            while($row = mysqli_fetch_assoc($result)) :
+            while($row = mysqli_fetch_assoc($sql)) :
             ?>
 
             <tbody>
@@ -53,8 +57,8 @@ $result = tampilData();
                 <td><?= $row['lama']; ?></td>
                 <td><?= $row['keper']; ?></td>
                 <td>
-                  <a href="edit.php?id=<?php echo $row['id']; ?>" title="Edit"><i class="material-icons">mode_edit</i></a>
-                  <a href="delete_data.php?id=<?php echo $row['id']; ?>" style="color:red;" title="Hapus"><i class="material-icons">delete</i></a>
+                  <a href="edit_bukutamu.php?id=<?php echo $row['id']; ?>" title="Edit"><i class="material-icons">mode_edit</i></a>
+                  <a href="delete_bukutamu.php?id=<?php echo $row['id']; ?>" style="color:red;" title="Hapus"><i class="material-icons">delete</i></a>
                 </td>
               </tr>
             </tbody>
@@ -63,6 +67,15 @@ $result = tampilData();
             ?>
           </table>
         </form>
+      </div>
+      <div class="row">
+        <div class="col s12">
+        <div class="pagination">
+            <?php for ($i=1; $i <=$pages; $i++) { ?>
+              <a href="?page=<?php echo $i; ?>" title="Halaman"><?php echo $i; ?></a>
+            <?php } ?>
+          </div>
+        </div>
       </div>
     </main>
 

@@ -14,15 +14,6 @@ function kirimData($noktp, $nama, $notelp, $asal, $tinggal, $lama, $keper){
   return run($query);
 }
 
-function tampilData(){
-  global $link;
-
-  $query = "SELECT * FROM tb_buku";
-  $result = mysqli_query($link, $query);
-
-  return $result;
-}
-
 function tampilData_per_id($noktp){
   global $link;
 
@@ -40,15 +31,6 @@ function hapusData($id){
 function editData($noktp, $nama, $notelp, $asal, $tinggal, $lama, $keper, $id){
   $query = "UPDATE tb_data SET noktp = '$noktp', nama = '$nama', notelp = '$notelp', asal = '$asal', tinggal = '$tinggal', lama = '$lama', keper = '$keper' WHERE id = $id";
   return run($query);
-}
-
-function jumlahData(){
-  global $link;
-
-  $query = "SELECT count(id) AS total FROM tb_buku";
-  $result = "mysqli_query($link, $query)";
-  $values = "mysqli_fetch_assoc($result)";
-  $num_rows = $values['total'];
 }
 
 ?>

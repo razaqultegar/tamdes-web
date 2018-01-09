@@ -1,52 +1,46 @@
-body{
-  font-family: "Roboto", sans-serif;
+#search-btn {
+  background:#0099ff;
+  color:white;
+  padding:10px 20px;
+  border-radius:0 5px 5px 0;
+    -moz-border-radius:0 5px 5px 0;
+    -webkit-border-radius:0 5px 5px 0;
+    -o-border-radius:0 5px 5px 0;
+  border:0 none;
+  font-weight:bold;
 }
 
-.dropdown-content {
-  background-color: #FFFFFF;
-  margin: 0;
-  display: none;
-  min-width: 200px; /* Changed this to accomodate content width */
-  max-height: auto;
-	margin-left: -1px; /* Add this to keep dropdown in line with edge of navbar */
-  overflow: hidden; /* Changed this from overflow-y:auto; to overflow:hidden; */
-  opacity: 0;
-  position: absolute;
-  white-space: nowrap;
-  z-index: 1;
-  will-change: width, height;
+#search-box {
+  background: #eee;
+  padding:10px;
+   border-radius:5px 0 0 5px;
+    -moz-border-radius:5px 0 0 5px;
+    -webkit-border-radius:5px 0 0 5px;
+    -o-border-radius:5px 0 0 5px;
+  border:0 none;
+  width:200px;
+  height: 18px;
 }
 
-.dropdown-content a:hover{
-  background-color: #e0e0e0;
+#search-box::placeholder{
+  color: black;
 }
 
-.box-menu{
-  background-color: #00c853;
-  font-family: "Roboto", sans-serif;
-  font-size: 30px;
-  color: #FFF;
-  width: 250px;
-  height: 180px;
-  padding: 10px;
-  border-radius: 5px;
-  margin: 0;
+.pagination {
+    display: inline-block;
 }
 
-.biru{
-  background-color: #0091ea;
+.pagination a {
+    background-color: #ddd;
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    margin-right: 7px;
+    text-decoration: none;
 }
 
-.box-menu h4{
-  font-size: 30px;
-  color: #FFF;
-  margin-top: 10px;
-}
-
-.box-menu a{
-  color: #FFF;
-}
-
-.geser{
-  margin-left: 20px;
+.pagination a:hover:not(.active) {
+    background-color:  #27ae60;
+    color: white;
+    border-radius: 5px;
 }
