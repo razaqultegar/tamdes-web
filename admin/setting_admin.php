@@ -1,7 +1,6 @@
 <?php
-require_once('../src/sidebar.php');
-//connect
 require_once('core/init.php');
+require_once('../dist/sidebar.php');
 ?>
 
 	<title>Setting Admin - TamuDesa</title>
@@ -26,5 +25,5 @@ require_once('core/init.php');
 	</main>
 
 <?php
-require_once('../src/footer.php');
+require_once('../dist/footer.php');
 ?>

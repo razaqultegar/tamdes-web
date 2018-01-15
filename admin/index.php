@@ -1,28 +1,20 @@
 <?php
 @session_start();
 if (@$_SESSION['admin']) {
-require_once('../src/sidebar.php');
-$link = mysqli_connect("localhost", "root", "", "db_tamdes") or die(mysqli_error($link));
+require_once('core/init.php');
+require_once('../dist/sidebar.php');
 
-$limit = 10;
-if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; };
-$start_from = ($page-1) * $limit;
-
-$sql = mysqli_query($link, "SELECT * FROM tb_buku LIMIT $start_from, $limit");
-
-$Hasil = mysqli_query($link, "SELECT * FROM tb_buku");
-$total = mysqli_num_rows($Hasil);
-
-$pages = ceil($total/$limit);
+$result = tampilData();
+$result = search();
 ?>
-    <title>Admin Page - TamuDesa</title>
+    <title>Dasbor Admin - TamuDesa</title>
 
     <main>
       <div class="section right" style="margin-right: 10px;">
         <div class="col s12">
-          <form action="search.php" method="post">
-            <input id="search-box" name="cari" size="40" type="text" placeholder="Masukkan No. KTP"/>
-            <input id="search-btn" value="Cari Tamu" type="submit"/>
+          <form action="" method="post">
+            <input id="search-box" name="input_cari" size="40" type="text" placeholder="Masukkan No. KTP"/>
+            <input id="search-btn" name="cari_data" value="Cari Tamu" type="submit"/>
           </form>
         </div>
       </div>
@@ -44,9 +36,9 @@ $pages = ceil($total/$limit);
             </thead>
 
             <?php
-            while($row = mysqli_fetch_assoc($sql)) :
+              while($row = mysqli_fetch_assoc($result)):
             ?>
-
+            
             <tbody>
               <tr>
                 <td><?= $row['noktp']; ?></td>
@@ -63,25 +55,16 @@ $pages = ceil($total/$limit);
               </tr>
             </tbody>
             <?php
-            endwhile;
+          endwhile;
             ?>
           </table>
         </form>
-      </div>
-      <div class="row">
-        <div class="col s12">
-        <div class="pagination">
-            <?php for ($i=1; $i <=$pages; $i++) { ?>
-              <a href="?page=<?php echo $i; ?>" title="Halaman"><?php echo $i; ?></a>
-            <?php } ?>
-          </div>
-        </div>
       </div>
     </main>
 
 <?php
 }else {
-  header("location:/tamdes/login.php");
+  header("location:/baru/index.php");
 }
-require_once('../src/footer.php');
+require_once('../dist/footer.php');
 ?>
