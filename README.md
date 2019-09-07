@@ -1,15 +1,12 @@
 # 📚 Aplikasi Buku Tamu Digital - Web Based
 
-Sebuah aplikasi untuk pencatatan dan pelaporan tamu pada suatu tempat menggunakan aplikasi digital. Jangan takut lagi data tamu Anda hilang, sobek, luntur terkena air, atau sebagainya karena data yang tersimpan menggunakan aplikasi ini secara otomatis akan masuk ke dalam database.
+Sebuah aplikasi untuk pencatatan dan pelaporan tamu pada suatu tempat menggunakan aplikasi digital. Jangan takut lagi data tamu Anda hilang, sobek, luntur terkena air, atau sebagainya karena data yang tersimpan menggunakan aplikasi ini secara otomatis akan masuk ke dalam database. **(Sedang dalam tahap pengembangan update dari php native ke codeigniter)**
 
 ## Fitur
 
-- Tambah Data Tamu
-- Lihat Data Tamu
-- Edit Data Tamu
-- Hapus Data Tamu
-- Pencarian Data Tamu
-- Export Data Tamu ke Excel dan PDF
+- Input Tamu
+- Panel Admin
+- Cetak Laporan (PDF dan Excel)
 
 ## Installasi
 
