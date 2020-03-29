@@ -8,6 +8,13 @@ Sebuah aplikasi untuk pencatatan dan pelaporan tamu pada suatu tempat menggunaka
 - Panel Admin
 - Cetak Laporan (PDF dan Excel)
 
+## Penambahan
+
+- [x] Update Sistem
+- [ ] Frontend
+- [ ] Pengisian Dinamis (Format Pengisian Buku dapat disesuaikan)
+- [ ] Perbaikan Cetak Laporan
+
 ## Installasi
 
 1.  **Menggunakan server lokal/XAMPP:**
