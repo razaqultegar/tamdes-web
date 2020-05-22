@@ -30,3 +30,7 @@ Sebuah aplikasi untuk pencatatan dan pelaporan tamu pada suatu tempat menggunaka
 1.  **🎉 Selamat menggunakan**
 
     Setelah proses di atas selesai, buka browser Anda dan arahkan ke: _`http://localhost/tamdes-web`_.
+
+## Donasi
+
+Gopay/Ovo/Dana/LinkAja via [Saweria](https://saweria.co/donate/razaqultegar)
